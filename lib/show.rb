@@ -14,11 +14,11 @@ class Show
     sep="||".colorize(:green)
     ligne="-----------------".colorize(:green)
     puts
-    puts " "*20+" #{@board[0]} #{sep} #{@board[1]} #{sep} #{@board[2]} "
-    puts " "*20+ligne
-    puts " "*20+" #{@board[3]} #{sep} #{@board[4]} #{sep} #{@board[5]} "
-    puts " "*20+ligne
-    puts " "*20+" #{@board[6]} #{sep} #{@board[7]} #{sep} #{@board[8]} "
+    puts " "*30+" #{@board[0]} #{sep} #{@board[1]} #{sep} #{@board[2]} "
+    puts " "*30+ligne
+    puts " "*30+" #{@board[3]} #{sep} #{@board[4]} #{sep} #{@board[5]} "
+    puts " "*30+ligne
+    puts " "*30+" #{@board[6]} #{sep} #{@board[7]} #{sep} #{@board[8]} "
     puts
   end
 end
