@@ -10,9 +10,9 @@ class Game
     print ">"
     us=gets.chomp
     if us.length>20
-    puts "entrer le nom du joueur 1(moins de 20 chars"
-    print ">"
-    us=gets.chomp
+      puts "entrer le nom du joueur 1(moins de 20 chars"
+      print ">"
+      us=gets.chomp
     end
     user1 = Player.new(us)
     @user << user1.name
@@ -20,15 +20,15 @@ class Game
     print ">"
     us=gets.chomp
     if us.length>20
-    puts "entrer le nom du joueur 2(moins de 20 chars"
-    print ">"
-    us=gets.chomp
+      puts "entrer le nom du joueur 2(moins de 20 chars"
+      print ">"
+      us=gets.chomp
     end
     user2 = Player.new(us)
     @user << user2.name
 
     return user
-    
+
   end
 
   def turn(game)
@@ -38,7 +38,6 @@ class Game
     system("clear")
     show=Show.new
     show.show_board(@board.sign)
-    
     while game.board.victory=="0"
       game.board.play_turn(game.user)
     end

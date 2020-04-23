@@ -30,7 +30,7 @@ class Board
       @case_played=gets.chomp
       sign="O"
     end
-    
+
     index_of_played_case=0
     correct=true
 
@@ -66,7 +66,7 @@ class Board
             index_of_played_case+=3
           when "C"
             index_of_played_case+=6
-          else 
+          else
           puts "NON CORRECT VALUE"
           correct=false
         end
@@ -74,8 +74,6 @@ class Board
           index_of_played_case+=(@case_played[1].to_i)-1
         end
     end
-
-
 
       if @boardcase[index_of_played_case].array =="  "
         @@count +=1
@@ -87,7 +85,7 @@ class Board
         end
         system("clear")
         show.show_board(out)
-        else
+      else 
         puts "case non vide"
       end
   end
