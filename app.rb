@@ -19,7 +19,8 @@ class Application
     while val != "no"
       game.turn(game)
       val=""
-      puts "voulez vous continuer ? "
+      puts " "*20+"voulez vous continuer ? yes/no (leave empty will continue)"
+      print " "*20+">"
       val=gets.chomp
     end
     puts game.victory

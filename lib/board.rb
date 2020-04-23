@@ -22,11 +22,13 @@ class Board
 
   def play_turn(user)
     if @@count%2 == 0
-      puts "c'est le tour du #{user[0]}"
+      puts " "*20+"c'est le tour du #{user[0]}"
+      print " "*20+">"
       @case_played=gets.chomp
       sign="X"
     else
-      puts "c'est le tour du #{user[1]}"
+      puts " "*20+"c'est le tour du #{user[1]}"
+      print " "*20+">"
       @case_played=gets.chomp
       sign="O"
     end
@@ -35,7 +37,7 @@ class Board
     correct=true
 
     if @case_played.length == 1
-      puts "1"
+      
       case @case_played
       when "1"
         index_of_played_case=6
@@ -55,9 +57,11 @@ class Board
         index_of_played_case=1
       when "9"
         index_of_played_case=2
+      else
+        puts " "*20+"NON CORRECT VALUE"
+        correct=false
       end
     elsif @case_played.length == 2
-      puts "2"
       @case_played=@case_played.split('')
         case @case_played[0]
           when "A"
@@ -67,7 +71,7 @@ class Board
           when "C"
             index_of_played_case+=6
           else
-          puts "NON CORRECT VALUE"
+          puts " "*20+"NON CORRECT VALUE"
           correct=false
         end
         if correct=true && @case_played[1].to_i <=3 && @case_played[1].to_i >=1 
@@ -86,7 +90,7 @@ class Board
         system("clear")
         show.show_board(out)
       else 
-        puts "case non vide"
+        puts " "*20+"case non vide"
       end
   end
 

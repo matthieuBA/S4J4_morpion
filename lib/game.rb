@@ -6,26 +6,28 @@ class Game
   def initialize
     system("clear")
     @user=[]
-    puts "entrer le nom du joueur 1"
-    print ">"
+    puts " "*20+"entrer le nom du joueur 1"
+    print " "*20+">"
     us=gets.chomp
     if us.length>20
-      puts "entrer le nom du joueur 1(moins de 20 chars"
-      print ">"
+      puts " "*20+"entrer le nom du joueur 1(moins de 20 chars"
+      print " "*20+">"
       us=gets.chomp
     end
+    system("clear")
     user1 = Player.new(us)
     @user << user1.name
-    puts "entrer le nom du joueur 2"
-    print ">"
+    puts " "*20+"entrer le nom du joueur 2"
+    print " "*20+">"
     us=gets.chomp
     if us.length>20
-      puts "entrer le nom du joueur 2(moins de 20 chars"
-      print ">"
+      puts " "*20+"entrer le nom du joueur 2(moins de 20 chars"
+      print " "*20+">"
       us=gets.chomp
     end
     user2 = Player.new(us)
     @user << user2.name
+    system("clear")
 
     return user
 
@@ -43,28 +45,28 @@ class Game
     end
     if game.board.victory.to_s.include?("O")
       @@count_O_victory+=1
-      puts "victory O"
+      puts " "*20+"victory O"
     elsif game.board.victory.to_s.include?("X")
       @@count_X_victory+=1
-      puts "victory X"
+      puts " "*20+"victory X"
     elsif game.board.victory.to_s.include?("ex-aequo")
       @@count_ex_victory+=1
     end
     puts 
-    puts "#{user[0]}#{" "*(20-user[0].length)} with \u{274C} won #{@@count_X_victory} times"
-    puts "#{user[1]}#{" "*(20-user[1].length)} with \u{1F518} won #{@@count_O_victory} times"
-    puts "ex-aequo                         #{@@count_ex_victory} times"
+    puts " "*20+"#{user[0]}#{" "*(20-user[0].length)} with \u{274C} won #{@@count_X_victory} times"
+    puts " "*20+"#{user[1]}#{" "*(20-user[1].length)} with \u{1F518} won #{@@count_O_victory} times"
+    puts " "*20+"ex-aequo                         #{@@count_ex_victory} times"
     puts 
 
   end
 
   def victory
     if @@count_X_victory > @@count_O_victory
-      return "\n\n#{user[0]} IS THE WINNER \n\n#{user[0]} with \u{274C} won #{@@count_X_victory-@@count_O_victory} more times than #{user[1]} with \u{1F518}\n\nGAME OVER"
+      return "\n\n"+" "*20+"#{user[0]} IS THE WINNER \n\n"+" "*20+"#{user[0]} with \u{274C} won #{@@count_X_victory-@@count_O_victory} more times than #{user[1]} with \u{1F518}\n\n"+" "*20+"GAME OVER"
     elsif @@count_X_victory < @@count_O_victory
-      return "\n\n#{user[1]} IS THE WINNER \n\n#{user[1]} with \u{1F518} won #{@@count_O_victory-@@count_X_victory} more times than #{user[0]} with \u{274C}\n\nGAME OVER"
+      return "\n\n"+" "*20+"#{user[1]} IS THE WINNER \n\n"+" "*20+"#{user[1]} with \u{1F518} won #{@@count_O_victory-@@count_X_victory} more times than #{user[0]} with \u{274C}\n\n"+" "*20+"GAME OVER"
     elsif @@count_X_victory == @@count_O_victory
-      return "Perfect Egality on  #{@@count_X_victory+@@count_O_victory+@@count_ex_victory} matche(s)\n\nGAME OVER"
+      return "\n\n"+" "*20+"Perfect Egality on  #{@@count_X_victory+@@count_O_victory+@@count_ex_victory} matche(s)\n\nGAME OVER"
     end
   end
 end
