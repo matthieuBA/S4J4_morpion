@@ -87,12 +87,9 @@ class Board
         end
         system("clear")
         show.show_board(out)
-        
-        else 
+        else
         puts "case non vide"
       end
-
-    
   end
 
 
