@@ -1,7 +1,5 @@
 class BoardCase
-
   attr_accessor :position, :sign
-
   def initialize(position)
     @sign = "  "
     @position = position
@@ -15,5 +13,4 @@ class BoardCase
     self.sign = sign
     self.position = position
   end
-
 end
