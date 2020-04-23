@@ -62,11 +62,11 @@ class Game
 
   def victory
     if @@count_X_victory > @@count_O_victory
-      return "\n\n"+" "*20+"#{user[0]} IS THE WINNER \n\n"+" "*20+"#{user[0]} with \u{274C} won #{@@count_X_victory-@@count_O_victory} more times than #{user[1]} with \u{1F518}\n\n"+" "*20+"GAME OVER"
+      return ("\n\n"+" "*20+"#{user[0]} IS THE WINNER \n\n"+" "*20+"#{user[0]} with \u{274C} won #{@@count_X_victory-@@count_O_victory} more times than #{user[1]} with \u{1F518}\n\n"+" "*20+"GAME OVER").colorize(:green)
     elsif @@count_X_victory < @@count_O_victory
-      return "\n\n"+" "*20+"#{user[1]} IS THE WINNER \n\n"+" "*20+"#{user[1]} with \u{1F518} won #{@@count_O_victory-@@count_X_victory} more times than #{user[0]} with \u{274C}\n\n"+" "*20+"GAME OVER"
+      return ("\n\n"+" "*20+"#{user[1]} IS THE WINNER \n\n"+" "*20+"#{user[1]} with \u{1F518} won #{@@count_O_victory-@@count_X_victory} more times than #{user[0]} with \u{274C}\n\n"+" "*20+"GAME OVER").colorize(:green)
     elsif @@count_X_victory == @@count_O_victory
-      return "\n\n"+" "*20+"Perfect Egality on  #{@@count_X_victory+@@count_O_victory+@@count_ex_victory} matche(s)\n\n"+" "*20+"GAME OVER"
+      return ("\n\n"+" "*20+"Perfect Egality on  #{@@count_X_victory+@@count_O_victory+@@count_ex_victory} matche(s)\n\n"+" "*20+"GAME OVER").colorize(:green)
     end
   end
 end
