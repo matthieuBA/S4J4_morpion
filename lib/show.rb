@@ -4,12 +4,12 @@ class Show
     @board=board
     @board.each_with_index do |element,i|
       if element == "X"
-        @board[i]="X".colorize(:red)#\u{274C}
+        @board[i]="\u{274C}".colorize(:red)#\u{274C}
       end
     end
     @board.each_with_index do |element,i|
       if element == "O"
-        @board[i]="O".colorize(:blue) #\u{1F518}
+        @board[i]="\u{1F518}".colorize(:blue) #\u{1F518}
       end
     end
 

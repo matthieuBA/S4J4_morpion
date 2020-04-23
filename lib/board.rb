@@ -1,6 +1,6 @@
 class Board
   attr_accessor :board ,:sign, :boardcase
-  @@count=1
+  @@count=0
   @@mouse = ""
   def initialize()
     @board=[]

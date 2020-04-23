@@ -52,18 +52,18 @@ class Game
       @@count_ex_victory+=1
     end
     puts 
-    puts "#{user[0]}#{" "*(20-user[0].length)} with \u{1F518} won #{@@count_O_victory} times"
-    puts "#{user[1]}#{" "*(20-user[1].length)} with \u{274C} won #{@@count_X_victory} times"
+    puts "#{user[0]}#{" "*(20-user[0].length)} with \u{274C} won #{@@count_X_victory} times"
+    puts "#{user[1]}#{" "*(20-user[1].length)} with \u{1F518} won #{@@count_O_victory} times"
     puts "ex-aequo                         #{@@count_ex_victory} times"
     puts 
 
   end
 
   def victory
-    if @@count_X_victory < @@count_O_victory
-      return "\n\n#{user[0]} IS THE WINNER \n\n#{user[0]} with \u{1F518} won #{@@count_O_victory-@@count_X_victory} more times than \u{274C}\n\nGAME OVER"
-    elsif @@count_X_victory > @@count_O_victory
-      return "\n\n#{user[1]} IS THE WINNER \n\n#{user[1]} with \u{274C} won #{@@count_X_victory-@@count_O_victory} more times than \u{1F518}\n\nGAME OVER"
+    if @@count_X_victory > @@count_O_victory
+      return "\n\n#{user[0]} IS THE WINNER \n\n#{user[0]} with \u{274C} won #{@@count_X_victory-@@count_O_victory} more times than \u{1F518}\n\nGAME OVER"
+    elsif @@count_X_victory < @@count_O_victory
+      return "\n\n#{user[1]} IS THE WINNER \n\n#{user[1]} with \u{1F518} won #{@@count_O_victory-@@count_X_victory} more times than \u{274C}\n\nGAME OVER"
     elsif @@count_X_victory == @@count_O_victory
       return "Perfect Egality on  #{@@count_X_victory+@@count_O_victory+@@count_ex_victory} matche(s)\n\nGAME OVER"
     end
