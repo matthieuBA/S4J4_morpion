@@ -1,6 +1,8 @@
 Projet de morpion en RUBY (POO)
 
-![https://repl.it/repls/CalculatingCandidDeletions](https://github.com/matthieuBA/S4J4_morpion/blob/master/screenshot.png)
+![screenshot](https://github.com/matthieuBA/S4J4_morpion/blob/master/screenshot.png)
+
+<a href=https://repl.it/repls/CalculatingCandidDeletions><img id="im" src=https://github.com/matthieuBA/S4J4_morpion/blob/master/screenshot.png></a>
 
 
 
