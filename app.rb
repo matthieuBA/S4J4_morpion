@@ -10,8 +10,6 @@ require 'game'
 require 'player'
 require 'show'
 
-
-
 class Application
   def perform
     val="yes"
@@ -26,14 +24,5 @@ class Application
     puts game.victory
   end
 end
-
-
-
-
-
-
-
-
-
 
 Application.new.perform

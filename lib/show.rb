@@ -1,5 +1,4 @@
 class Show
-
   def show_board(board)
     @board=board
     @board.each_with_index do |element,i|
@@ -12,7 +11,6 @@ class Show
         @board[i]="\u{1F518}"
       end
     end
-
     sep="||".colorize(:green)
     ligne="-----------------".colorize(:green)
     puts
@@ -22,7 +20,5 @@ class Show
     puts " "*20+ligne
     puts " "*20+" #{@board[6]} #{sep} #{@board[7]} #{sep} #{@board[8]} "
     puts
-
   end
-
 end

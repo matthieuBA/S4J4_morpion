@@ -18,8 +18,6 @@ class Board
       end
   end
 
-
-
   def play_turn(user)
     if @@count%2 == 0
       puts " "*20+"c'est le tour du #{user[0]}"
@@ -37,7 +35,6 @@ class Board
     correct=true
 
     if @case_played.length == 1
-      
       case @case_played
       when "1"
         index_of_played_case=6
@@ -93,7 +90,6 @@ class Board
         puts " "*20+"case non vide"
       end
   end
-
 
   def victory
     state="0"

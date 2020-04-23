@@ -57,7 +57,6 @@ class Game
     puts " "*20+"#{user[1]}#{" "*(20-user[1].length)} with \u{1F518} won #{@@count_O_victory} times"
     puts " "*20+"ex-aequo                         #{@@count_ex_victory} times"
     puts
-
   end
 
   def victory
