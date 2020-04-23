@@ -14,7 +14,7 @@ class Show
     end
 
     sep="|".colorize(:green)
-    ligne="---------------".colorize(:green)
+    ligne="--------------".colorize(:green)
 
     puts " #{@board[0]} #{sep} #{@board[1]} #{sep} #{@board[2]} "
     puts ligne

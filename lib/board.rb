@@ -146,7 +146,6 @@ class Board
         break
       end
     end
-    puts state
     return state
   end
 end
