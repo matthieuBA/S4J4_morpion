@@ -6,6 +6,21 @@
 <a href=https://repl.it/@MatthieuBachele/S4J4morpion><img id="im" src=https://github.com/matthieuBA/S4J4_morpion/blob/master/screenshot.png></a>
 
  ruby app.rb
+controlle avec des coordonées 
+                                A1  ||  A2  || A3   
+                              -----------------
+                                B1  || B2   ||  B3  
+                              -----------------
+                                C1  || C2   ||  C3   
+                                
+                                ou avec le pavé numerique 
+
+                                7  ||  8  || 9   
+                              -----------------
+                                4  ||  5  ||  6  
+                              -----------------
+                                1  ||  2  ||  3  
+
                     entrer le nom du joueur 1
                     > 1
 
